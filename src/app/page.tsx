@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/JsonLd";
 import { Hero } from "@/components/home/Hero";
+import { StatsStrip } from "@/components/home/StatsStrip";
 import { Cases } from "@/components/home/Cases";
 import { ClientLogos } from "@/components/home/ClientLogos";
 import { Platforms } from "@/components/home/Platforms";
-import { Research } from "@/components/home/Research";
 import { Consultation } from "@/components/home/Consultation";
 import { Testimonials } from "@/components/home/Testimonials";
 import { Contact } from "@/components/home/Contact";
@@ -26,12 +26,12 @@ export default function HomePage() {
     <>
       <JsonLd data={[organizationSchema(), websiteSchema(), personSchema()]} />
       <Hero />
+      <StatsStrip />
       <ClientLogos />
-      <Cases />
       <Platforms />
-      <Research />
-      <Consultation />
+      <Cases />
       <Testimonials />
+      <Consultation />
       <Contact />
     </>
   );

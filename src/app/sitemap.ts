@@ -19,10 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: abs("/"), priority: 1, changeFrequency: "weekly" },
     { url: abs("/virazh"), priority: 0.9, changeFrequency: "weekly" },
+    { url: abs("/virazh/arenas"), priority: 0.9, changeFrequency: "weekly" },
     { url: abs("/blog"), priority: 0.8, changeFrequency: "weekly" },
     { url: abs("/podcast"), priority: 0.7, changeFrequency: "monthly" },
     { url: abs("/career"), priority: 0.7, changeFrequency: "weekly" },
     { url: abs("/leadership"), priority: 0.5, changeFrequency: "monthly" },
+    // /virazh/arenas/brief is noindex (one-pager for PDF export) — excluded.
   ];
 
   // Only canonical URLs in sitemap — per Google guidelines.

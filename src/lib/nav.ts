@@ -2,11 +2,11 @@ export const SITE_NAME = "Бюро Цифровых Технологий";
 export const SITE_SHORT = "БЦТ";
 
 export const primaryNav = [
-  { href: "/virazh", label: "Вираж" },
+  { href: "/virazh", label: "Клубы" },
+  { href: "/virazh/arenas", label: "Арены" },
   { href: "/blog", label: "Блог" },
   { href: "/podcast", label: "Подкаст" },
   { href: "/career", label: "Карьера" },
-  { href: "/leadership", label: "Манифест" },
 ] as const;
 
 export const footerSections = [
@@ -19,11 +19,19 @@ export const footerSections = [
     ],
   },
   {
-    title: "Продукты",
+    title: "Вираж",
     links: [
-      { href: "/virazh", label: "CRM Вираж" },
+      { href: "/virazh", label: "Для клуба" },
+      { href: "/virazh/arenas", label: "Для арены" },
+      { href: "/virazh/arenas/brief", label: "One-pager" },
+    ],
+  },
+  {
+    title: "Контент",
+    links: [
       { href: "/blog", label: "Блог" },
       { href: "/podcast", label: "Подкаст" },
+      { href: "/rss.xml", label: "RSS" },
     ],
   },
   {

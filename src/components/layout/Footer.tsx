@@ -5,8 +5,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-20 border-t border-border/60 bg-muted/30">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+    <footer className="print:hidden mt-20 border-t border-border/60 bg-muted/30">
+      <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
           <div className="text-lg font-semibold tracking-tight">{SITE_NAME}</div>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">
