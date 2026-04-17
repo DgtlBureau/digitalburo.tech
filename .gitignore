@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# migration artifacts — content is already copied into content/ and public/images/.
+# Keeping only the extraction scripts in git; the raw HTML, intermediate MDX, and
+# duplicated images are one-shot and regeneratable.
+/migration/raw-html/
+/migration/blog/
+/migration/images/
+/migration/podcasts/
+/migration/vacancies/
+/migration/static/
+/migration/*.json
+/migration/**/__pycache__/
