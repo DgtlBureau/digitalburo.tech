@@ -8,6 +8,8 @@ import {
 } from "@/lib/content";
 import { SITE_URL } from "@/lib/urls";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, priority: 1, changeFrequency: "weekly" },

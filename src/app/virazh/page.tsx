@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ui/button-link";
-import { ContactForm } from "@/components/forms/ContactForm";
+import { ContactCard } from "@/components/forms/ContactCard";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllPosts } from "@/lib/content";
 import {
@@ -241,7 +241,7 @@ export default function VirazhPage() {
                 поставленных целей. Заполните форму — и мы свяжемся.
               </p>
             </div>
-            <ContactForm source="virazh" />
+            <ContactCard source="virazh" emailSubject="Запрос по Виражу" />
           </div>
         </div>
       </section>

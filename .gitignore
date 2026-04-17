@@ -51,3 +51,14 @@ next-env.d.ts
 /migration/static/
 /migration/*.json
 /migration/**/__pycache__/
+
+# Static export output
+/out/
+
+# Auto-generated at build time
+/public/rss.xml
+/public/tpost/
+/public/ru/
+/public/buro/
+/public/bureau_en/
+/public/oldpage/

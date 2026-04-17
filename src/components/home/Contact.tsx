@@ -1,4 +1,4 @@
-import { ContactForm } from "@/components/forms/ContactForm";
+import { ContactCard } from "@/components/forms/ContactCard";
 
 export function Contact() {
   return (
@@ -46,7 +46,7 @@ export function Contact() {
               </div>
             </dl>
           </div>
-          <ContactForm source="home" />
+          <ContactCard source="home" emailSubject="Заявка с главной" />
         </div>
       </div>
     </section>
