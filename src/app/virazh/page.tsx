@@ -4,6 +4,8 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { ContactCard } from "@/components/forms/ContactCard";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllPosts } from "@/lib/content";
+import { ORG_ID, organizationData } from "@/lib/organizationData";
+import { absoluteUrl } from "@/lib/urls";
 import {
   virazhHero,
   virazhValueProps,
@@ -13,9 +15,9 @@ import {
 } from "@/lib/virazhData";
 
 export const metadata: Metadata = {
-  title: "CRM Вираж — для спортивных клубов",
+  title: "Вираж — операционная система клуба и стадиона",
   description:
-    "CRM для хоккейных и футбольных клубов КХЛ и РПЛ. Управление болельщиками, продажа билетов, RFM-аналитика. Используют ХК Торпедо, ПФК Крылья Советов.",
+    "Единая платформа: билеты, CRM, программа лояльности, мобильное приложение, предиктивная аналитика. В проде у Авангарда, Торпедо, Динамо.",
   alternates: { canonical: "/virazh" },
 };
 
@@ -24,14 +26,26 @@ const productSchema = {
   "@type": "SoftwareApplication",
   name: "CRM Вираж",
   applicationCategory: "BusinessApplication",
-  operatingSystem: "Web, iOS, Android",
+  operatingSystem: ["Web", "iOS", "Android"],
   description:
-    "CRM-платформа для спортивных клубов — управление болельщиками, билетами, программой лояльности, предиктивная аналитика.",
+    "Операционная платформа для спортивных клубов и стадионов: билеты, CRM, программа лояльности, мобильное приложение, предиктивная аналитика.",
+  url: absoluteUrl("/virazh"),
+  publisher: {
+    "@id": ORG_ID,
+    "@type": "Organization",
+    name: organizationData.name,
+    url: organizationData.url,
+  },
   offers: {
     "@type": "Offer",
     priceCurrency: "RUB",
-    price: "0",
-    description: "Свяжитесь для расчёта",
+    availability: "https://schema.org/InStock",
+    url: absoluteUrl("/virazh/#contact"),
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "RUB",
+      description: "Корпоративные тарифы — обсуждается индивидуально",
+    },
   },
 };
 

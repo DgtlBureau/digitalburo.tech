@@ -4,6 +4,8 @@ import { MdxContent } from "@/components/mdx/MdxContent";
 import { JsonLd } from "@/components/JsonLd";
 import type { Post } from "@/lib/content";
 import { absoluteUrl } from "@/lib/urls";
+import { postCanonicalPath } from "@/lib/canonical";
+import { ORG_ID, organizationData } from "@/lib/organizationData";
 
 const dateFormatter = new Intl.DateTimeFormat("ru-RU", {
   day: "numeric",
@@ -19,7 +21,8 @@ export function PostPage({
   variant: "blog" | "virazh";
 }) {
   const { frontmatter, body, readingMinutes } = post;
-  const canonicalPath = `/${variant}/tpost/${frontmatter.slug}`;
+  const canonicalPath = postCanonicalPath(frontmatter, variant);
+  const canonicalAbs = absoluteUrl(canonicalPath);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -28,21 +31,53 @@ export function PostPage({
     description: frontmatter.description,
     image: frontmatter.ogImage ? absoluteUrl(frontmatter.ogImage) : undefined,
     datePublished: frontmatter.date,
-    author: {
-      "@type": "Organization",
-      name: "Бюро Цифровых Технологий",
-    },
+    dateModified: frontmatter.date,
+    inLanguage: "ru-RU",
+    author: frontmatter.author
+      ? { "@type": "Person", name: frontmatter.author }
+      : { "@id": ORG_ID, "@type": "Organization", name: organizationData.name },
     publisher: {
       "@type": "Organization",
-      name: "Бюро Цифровых Технологий",
-      url: "https://digitalburo.tech",
+      "@id": ORG_ID,
+      name: organizationData.name,
+      url: organizationData.url,
+      logo: {
+        "@type": "ImageObject",
+        url: organizationData.logo,
+      },
     },
-    mainEntityOfPage: absoluteUrl(canonicalPath),
+    mainEntityOfPage: canonicalAbs,
+    keywords: frontmatter.tags.length > 0 ? frontmatter.tags.join(", ") : undefined,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Главная",
+        item: absoluteUrl("/"),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: variant === "virazh" ? "Вираж" : "Блог",
+        item: absoluteUrl(variant === "virazh" ? "/virazh/" : "/blog/"),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: frontmatter.title,
+        item: canonicalAbs,
+      },
+    ],
   };
 
   return (
     <main className="mx-auto w-full max-w-3xl px-4 py-12 md:py-20">
-      <JsonLd data={articleSchema} />
+      <JsonLd data={[articleSchema, breadcrumbSchema]} />
       <nav className="mb-8 text-sm text-muted-foreground">
         <Link
           href={variant === "virazh" ? "/virazh" : "/blog"}

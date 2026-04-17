@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PostPage } from "@/components/blog/PostPage";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/content";
+import { postCanonicalPath } from "@/lib/canonical";
 
 type Params = { slug: string };
 
@@ -19,10 +20,12 @@ export async function generateMetadata({
   if (!post) return {};
 
   const { frontmatter } = post;
+  const canonical = postCanonicalPath(frontmatter, "blog");
+
   return {
     title: frontmatter.title,
     description: frontmatter.description,
-    alternates: { canonical: `/blog/tpost/${slug}` },
+    alternates: { canonical },
     openGraph: {
       type: "article",
       title: frontmatter.title,

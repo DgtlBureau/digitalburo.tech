@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PostPage } from "@/components/blog/PostPage";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/content";
+import { postCanonicalPath } from "@/lib/canonical";
 
 type Params = { slug: string };
 
@@ -19,18 +20,12 @@ export async function generateMetadata({
   if (!post) return {};
 
   const { frontmatter } = post;
-  // For dual-path posts, canonical points to whichever source was marked canonical
-  // in the original migration (canonicalSource field). Otherwise virazh path wins here.
-  const canonical = frontmatter.canonical ?? `/virazh/tpost/${slug}`;
+  const canonical = postCanonicalPath(frontmatter, "virazh");
 
   return {
     title: frontmatter.title,
     description: frontmatter.description,
-    alternates: {
-      canonical: canonical.startsWith("http")
-        ? canonical.replace("https://digitalburo.tech", "")
-        : canonical,
-    },
+    alternates: { canonical },
     openGraph: {
       type: "article",
       title: frontmatter.title,

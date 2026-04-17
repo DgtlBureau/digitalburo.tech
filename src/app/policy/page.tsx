@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Политика конфиденциальности",
   description: "Политика обработки персональных данных digitalburo.tech.",
   alternates: { canonical: "/policy" },
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function PolicyPage() {

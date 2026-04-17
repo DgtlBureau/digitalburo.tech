@@ -5,14 +5,11 @@ export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/policy"],
-      },
-    ],
+    // Policy page has noindex meta already. Keeping /policy crawlable so
+    // Google actually sees the noindex directive (Disallow would block crawl
+    // and Google might index the URL anyway from external links).
+    rules: [{ userAgent: "*", allow: "/" }],
     sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
+    host: SITE_URL.replace(/^https?:\/\//, ""),
   };
 }
