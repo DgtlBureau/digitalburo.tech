@@ -6,6 +6,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import matter from "gray-matter";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -22,27 +23,6 @@ function escapeXml(s) {
     .replace(/'/g, "&apos;");
 }
 
-function parseFrontmatter(raw) {
-  const match = raw.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) return {};
-  const body = match[1];
-  const fm = {};
-  const lines = body.split("\n");
-  let currentKey = null;
-  for (const line of lines) {
-    const kv = line.match(/^([a-zA-Z0-9_]+):\s*(.*)$/);
-    if (kv) {
-      currentKey = kv[1];
-      let value = kv[2].trim();
-      if (value.startsWith('"') && value.endsWith('"')) {
-        value = value.slice(1, -1).replace(/\\"/g, '"');
-      }
-      fm[currentKey] = value;
-    }
-  }
-  return fm;
-}
-
 function readPosts() {
   const entries = readdirSync(BLOG_DIR, { withFileTypes: true });
   const posts = [];
@@ -51,7 +31,7 @@ function readPosts() {
     const mdxPath = join(BLOG_DIR, entry.name, "index.mdx");
     try {
       const raw = readFileSync(mdxPath, "utf8");
-      const fm = parseFrontmatter(raw);
+      const { data: fm } = matter(raw);
       if (fm.title && fm.slug && fm.date) posts.push(fm);
     } catch {
       // skip unreadable
