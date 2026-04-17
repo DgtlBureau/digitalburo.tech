@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "home",
+    "chars": 19544,
+    "images": 117,
+    "blocks": 103
+  },
+  {
+    "slug": "leadership",
+    "chars": 1584,
+    "images": 6,
+    "blocks": 28
+  },
+  {
+    "slug": "career",
+    "chars": 5590,
+    "images": 22,
+    "blocks": 60
+  },
+  {
+    "slug": "virazh",
+    "chars": 7103,
+    "images": 35,
+    "blocks": 59
+  },
+  {
+    "slug": "policy",
+    "chars": 21505,
+    "images": 0,
+    "blocks": 3
+  },
+  {
+    "slug": "ru-legacy",
+    "chars": 0,
+    "images": 0,
+    "blocks": 0
+  },
+  {
+    "slug": "buro-legacy",
+    "chars": 780,
+    "images": 3,
+    "blocks": 12
+  }
+]

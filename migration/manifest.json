@@ -1,0 +1,218 @@
+{
+  "static": [
+    {
+      "slug": "home",
+      "url": "/",
+      "meta": {
+        "title": "Бюро Цифровых Технологий (БЦТ) — Digital-агентство для спортивных клубов",
+        "description": "CRM Вираж, мобильные приложения и маркетинг для клубов КХЛ и РПЛ. Клиенты: ХК Торпедо, ХК Адмирал, ПФК Крылья Советов. 10+ лет в спорте. ",
+        "og_title": "Бюро Цифровых Технологий (БЦТ) — Digital-агентство для спортивных клубов",
+        "og_image": "https://static.tildacdn.com/tild6535-3938-4665-a430-366331333364/_.jpg",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech"
+      },
+      "out": "static/home.mdx",
+      "images": 0,
+      "body_chars": 0
+    },
+    {
+      "slug": "leadership",
+      "url": "/leadership",
+      "meta": {
+        "title": "Манифест",
+        "description": "",
+        "og_title": "Манифест",
+        "og_image": null,
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/leadership"
+      },
+      "out": "static/leadership.mdx",
+      "images": 0,
+      "body_chars": 0
+    },
+    {
+      "slug": "career",
+      "url": "/career",
+      "meta": {
+        "title": "Бюро Цифровых Технологий - мы делаем лучший спортивный софт",
+        "description": "БЦТ это Разработка ios и Android мобильных приложений и сайтов для спорта.",
+        "og_title": "Карьера в Бюро Цифровых Технологий",
+        "og_image": "https://static.tildacdn.com/tild6535-3938-4665-a430-366331333364/_.jpg",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/career"
+      },
+      "out": "static/career.mdx",
+      "images": 0,
+      "body_chars": 0
+    },
+    {
+      "slug": "virazh",
+      "url": "/virazh",
+      "meta": {
+        "title": "RM Вираж — CRM-система для спортивных клубов России",
+        "description": "CRM для хоккейных и футбольных клубов КХЛ и РПЛ. Управление болельщиками, продажа билетов, RFM-аналитика. Используют ХК Торпедо, ПФК Крылья Советов.",
+        "og_title": "Вираж – Система управления болельщиками Спортивных клубов",
+        "og_image": "https://static.tildacdn.com/tild6433-3431-4137-a362-663735623232/photo.png",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/virazh"
+      },
+      "out": "static/virazh.mdx",
+      "images": 0,
+      "body_chars": 0
+    }
+  ],
+  "podcasts": [
+    {
+      "slug": "ayz5zzj661-1-iskusstvo-zakaznoi-razrabotki",
+      "url": "/tpost/ayz5zzj661-1-iskusstvo-zakaznoi-razrabotki",
+      "meta": {
+        "title": "Искусство заказной разработки",
+        "description": "",
+        "og_title": "Искусство заказной разработки",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/ayz5zzj661-1-iskusstvo-zakaznoi-razrabotki"
+      },
+      "out": "podcasts/ayz5zzj661-1-iskusstvo-zakaznoi-razrabotki.mdx",
+      "images": 0,
+      "body_chars": 1679
+    },
+    {
+      "slug": "ndpfff4ll1-2-kak-ustroen-internet",
+      "url": "/tpost/ndpfff4ll1-2-kak-ustroen-internet",
+      "meta": {
+        "title": "Как устроен Интернет",
+        "description": "",
+        "og_title": "Как устроен Интернет",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/ndpfff4ll1-2-kak-ustroen-internet"
+      },
+      "out": "podcasts/ndpfff4ll1-2-kak-ustroen-internet.mdx",
+      "images": 0,
+      "body_chars": 2512
+    },
+    {
+      "slug": "4rgihsday1-3-kak-python-razrabotchik-prevraschaetsy",
+      "url": "/tpost/4rgihsday1-3-kak-python-razrabotchik-prevraschaetsy",
+      "meta": {
+        "title": "§3. Как Python-разработчик превращается в инженера-программиста",
+        "description": "",
+        "og_title": "§3. Как Python-разработчик превращается в инженера-программиста",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/4rgihsday1-3-kak-python-razrabotchik-prevraschaetsy"
+      },
+      "out": "podcasts/4rgihsday1-3-kak-python-razrabotchik-prevraschaetsy.mdx",
+      "images": 0,
+      "body_chars": 2044
+    },
+    {
+      "slug": "lubrbml771-4-pochemu-gospodryadi-peredayut-druzyam",
+      "url": "/tpost/lubrbml771-4-pochemu-gospodryadi-peredayut-druzyam",
+      "meta": {
+        "title": "§4. Почему господряды передают друзьям и родственникам",
+        "description": "",
+        "og_title": "§4. Почему господряды передают друзьям и родственникам",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/lubrbml771-4-pochemu-gospodryadi-peredayut-druzyam"
+      },
+      "out": "podcasts/lubrbml771-4-pochemu-gospodryadi-peredayut-druzyam.mdx",
+      "images": 0,
+      "body_chars": 1846
+    },
+    {
+      "slug": "tzvjfmakz1-5-snachala-distributsiya-zatem-produkt",
+      "url": "/tpost/tzvjfmakz1-5-snachala-distributsiya-zatem-produkt",
+      "meta": {
+        "title": "§5. Сначала дистрибуция, затем продукт",
+        "description": "",
+        "og_title": "§5. Сначала дистрибуция, затем продукт",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/tzvjfmakz1-5-snachala-distributsiya-zatem-produkt"
+      },
+      "out": "podcasts/tzvjfmakz1-5-snachala-distributsiya-zatem-produkt.mdx",
+      "images": 0,
+      "body_chars": 1811
+    },
+    {
+      "slug": "p33fpx4f71-6-kak-vibirayut-yazik-programmirovaniya",
+      "url": "/tpost/p33fpx4f71-6-kak-vibirayut-yazik-programmirovaniya",
+      "meta": {
+        "title": "§6. Как выбирают язык программирования в бизнесе",
+        "description": "",
+        "og_title": "§6. Как выбирают язык программирования в бизнесе",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/p33fpx4f71-6-kak-vibirayut-yazik-programmirovaniya"
+      },
+      "out": "podcasts/p33fpx4f71-6-kak-vibirayut-yazik-programmirovaniya.mdx",
+      "images": 0,
+      "body_chars": 1466
+    }
+  ],
+  "vacancies": [
+    {
+      "slug": "9pyckxd3n1-flutter-razrabotchik",
+      "url": "/tpost/9pyckxd3n1-flutter-razrabotchik",
+      "meta": {
+        "title": "Flutter-разработчик",
+        "description": " Обязанности:  • Участие в командной разработке проекта • Участие в написании кода и проектировании решения • Проведение code review, соблюдение сроков и качества разработки, участие в принятии архитектурных решений",
+        "og_title": "Flutter-разработчик",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/9pyckxd3n1-flutter-razrabotchik"
+      },
+      "out": "vacancies/9pyckxd3n1-flutter-razrabotchik.mdx",
+      "images": 0,
+      "body_chars": 1515
+    },
+    {
+      "slug": "yo0iei17a1-middle-php-laravel-web-razrabotchik",
+      "url": "/tpost/yo0iei17a1-middle-php-laravel-web-razrabotchik",
+      "meta": {
+        "title": "Middle PHP Laravel Web-разработчик",
+        "description": " Обязанности:   • Разрабатывать администраторскую панель, API и бизнес-логику; • Проектировать архитектуру • Работать в скрам-команде",
+        "og_title": "Middle PHP Laravel Web-разработчик",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/yo0iei17a1-middle-php-laravel-web-razrabotchik"
+      },
+      "out": "vacancies/yo0iei17a1-middle-php-laravel-web-razrabotchik.mdx",
+      "images": 0,
+      "body_chars": 2196
+    },
+    {
+      "slug": "g1vvl19a91-menedzher-po-b2b-prodazham",
+      "url": "/tpost/g1vvl19a91-menedzher-po-b2b-prodazham",
+      "meta": {
+        "title": "Менеджер по B2B Продажам",
+        "description": " Обязанности:   • Привлекать и развивать новых клиентов Среднего и Крупного Бизнеса • Определять потребности клиентов в цифровых коммуникациях",
+        "og_title": "Менеджер по B2B Продажам",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/g1vvl19a91-menedzher-po-b2b-prodazham"
+      },
+      "out": "vacancies/g1vvl19a91-menedzher-po-b2b-prodazham.mdx",
+      "images": 0,
+      "body_chars": 1998
+    },
+    {
+      "slug": "ji623k2n61-middle-project-manager",
+      "url": "/tpost/ji623k2n61-middle-project-manager",
+      "meta": {
+        "title": "Middle+ Project Manager",
+        "description": " Обязанности:   • Быть готовым договариваться с клиентами, которые отказываются с вами договариваться • Находить общий язык с командой, настраивать на позитивный лад",
+        "og_title": "Middle+ Project Manager",
+        "og_image": "",
+        "og_type": "website",
+        "canonical": "https://digitalburo.tech/tpost/ji623k2n61-middle-project-manager"
+      },
+      "out": "vacancies/ji623k2n61-middle-project-manager.mdx",
+      "images": 0,
+      "body_chars": 2157
+    }
+  ]
+}
